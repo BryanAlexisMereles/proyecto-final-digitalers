@@ -5,8 +5,9 @@ const routerPosts = express.Router()
 routerPosts.get('/posts', async (req,res) => {
     try {
 
-        const posts = await Post.find({})  
-        res.render('get',
+        const posts = await Post.find({}).lean()
+        const title = "Listado de Post" 
+        res.render('posts',
         {
             title,
             posts

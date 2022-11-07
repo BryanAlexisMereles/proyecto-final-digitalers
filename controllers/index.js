@@ -1,9 +1,17 @@
 const express = require('express')
-const { statusModel } = require("../models")
 
 const getRootController = (req,res = express.response) => {
-    res.status(200).send(statusModel)
+   /*  res.status(200).send(statusModel) */
+   try {
+    res.render('index',
+    {
+    })
+
+} catch (error) {
+    console.log(error)
 }
+}
+
 
 
 module.exports = {
