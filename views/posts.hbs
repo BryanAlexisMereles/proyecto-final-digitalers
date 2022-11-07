@@ -1,0 +1,12 @@
+{{#each posts}}
+        <div class="card border-secondary m-3" style="max-width: 100%;">
+            <div class="card-header">Posteo</div>
+                <div class="card-body">
+                <h4 class="card-title">{{this.title}}</h4>
+                <p class="card-text">{{this.body}}</p>
+                <a href="http://localhost:8080/{{this.slug}}" class="btn btn-light text-dark">Ver</a>
+                <a href="http://localhost:8080/{{this.slug}}" class="btn btn-dark text-light">Editar</a>
+                <a href="http://localhost:8080/{{this.slug}}" class="btn btn-primary text-white">Eliminar</a>
+            </div>
+        </div>
+{{/each}}

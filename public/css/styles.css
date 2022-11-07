@@ -1,0 +1,76 @@
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#chat-icon {
+    position: fixed;
+    width: 120px;
+    right: 60px;
+    bottom: 60px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgba(255, 255, 255, 0.553);
+    background-color: #ffffff67;
+}
+
+#hidden-chat {
+    background-color: azure;
+    position: fixed;
+    width: 25px;
+    height: 44px;
+    right: 0;
+    bottom: 100px;
+    border-radius: 10px 0 0 10px;
+    opacity: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#hidden-chat::after {
+    content: attr(data-content);
+    font-size: 25px;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    padding-bottom: 3px;
+}
+
+#footer-dev {
+    z-index: 1;
+    text-decoration: none;
+}
+
+.logo-text {
+    font-size: 30px;
+}
+
+.esconder-logo-chat {
+    animation: esconderLogo cubic-bezier(0.19, 1, 0.22, 1) 1s both;
+}
+.mostrar-logo-chat {
+    animation: mostrarLogo cubic-bezier(0.19, 1, 0.22, 1) 1s both;
+}
+
+@keyframes esconderLogo {
+    0% {
+        right: 60px;
+    }
+    100% {
+        right: -120px;
+        opacity: 0;
+    }
+}
+
+@keyframes mostrarLogo {
+    0% {
+        right: -120px;
+    }
+    100% {
+        right: 60px;
+        opacity: 1;
+    }
+}
