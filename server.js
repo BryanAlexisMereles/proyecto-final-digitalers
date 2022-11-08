@@ -26,8 +26,8 @@ app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 
 //Routes
-app.use('/', routerIndex)
 app.use('/', routerPosts)
+app.use('/', routerIndex)
 //Routes solo para dev
 if(process.env.ENV_DEV) {
     app.use('/', routerDev)
