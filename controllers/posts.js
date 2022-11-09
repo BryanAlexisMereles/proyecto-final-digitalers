@@ -15,13 +15,12 @@ const getPosts = async (req,res = express.response) => {
                 'slug':'$slug',
                 'body': {
                   '$substrCP': [
-                    '$body', 0, 50
+                    '$body', 0, 500
                   ]
                 }
               }
             }
           ])
-        console.log(posts)
         const title = "Listado de Post"
         res.render('posts',
         {
@@ -38,11 +37,21 @@ const getPosts = async (req,res = express.response) => {
 
 const showPosts = async (req = express.request,res = express.response) => {
     const post = await Post.findOne({slug:req.params.slug}).lean()
-    res.render('show',
-    {
+
+    if(post === null) 
+    { 
+      res.render('show', {
+        title: 'No existe este post',
+        descripcion: '<div class="d-flex justify-content-center"><img src="https://i.imgflip.com/703cqo.jpg" width=250 height=250></div>'
+      }) 
+    }
+    else{
+      res.render('show', {
         title: post.title,
         descripcion: post.body
-    })
+      }) 
+    }
+
 }
 
 module.exports = {
