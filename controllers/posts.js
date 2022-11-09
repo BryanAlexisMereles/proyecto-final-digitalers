@@ -37,7 +37,6 @@ const getPosts = async (req,res = express.response) => {
 
 const showPosts = async (req = express.request,res = express.response) => {
     const post = await Post.findOne({slug:req.params.slug}).lean()
-
     if(post === null) 
     { 
       res.render('show', {
@@ -54,7 +53,14 @@ const showPosts = async (req = express.request,res = express.response) => {
 
 }
 
+const showPostsJson = async (req = express.request,res = express.response) => {
+  const post = await Post.findOne({slug:req.params.slug}).lean()
+  res.send(post)
+}
+
+
 module.exports = {
     getPosts,
-    showPosts
+    showPosts,
+    showPostsJson
 }

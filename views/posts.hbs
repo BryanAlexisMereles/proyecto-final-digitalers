@@ -3,11 +3,11 @@
     <button type="button" class="btn btn-success">Crea uno</button>
 </div>
 {{#each posts}}
-        <div class="card border-secondary m-3" style="max-width: 100%;">
+        <div id="{{this.slug}}" class="card border-secondary m-3" style="max-width: 100%;">
             <div class="card-header">Posteo</div>
                 <div class="card-body">
                 <h4 class="card-title">{{this.title}}</h4>
-                <p class="card-text">{{this.body}}   <a href="./posts/{{this.slug}}">[Ver más]</a></p>
+                <p class="card-text">{{this.body}}   <a class="vermas" onclick="vermas('{{this.slug}}')">[Ver más]</a></p>
                 <a href="./posts/{{this.slug}}" class="btn btn-light text-dark">Ver</a>
                 <a href="" class="btn btn-dark text-light">Editar</a>
                 <a href="" class="btn btn-primary text-white">Eliminar</a>

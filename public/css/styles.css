@@ -57,6 +57,10 @@ h6 {
     text-decoration: none;
 }
 
+.vermas {
+    cursor: pointer;
+}
+
 .logo-text {
     font-size: 30px;
 }

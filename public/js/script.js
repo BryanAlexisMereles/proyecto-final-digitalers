@@ -2,6 +2,7 @@ particlesJS.load('particles-js', '/assets/particles.json', function() {
     console.log('callback - particles.js config loaded');
   });
 
+// Animacion icono de chat
 
 let hiddenChat = document.getElementById("hidden-chat")
 let chatIcon = document.getElementById("chat-icon")
@@ -23,3 +24,15 @@ hiddenChat.addEventListener('click',() => {
 })
 
 hiddenChat.addEventListener("animationend", ()=>{}, false);
+
+// Funcion para ver mas contenido de los posts
+async function vermas(slug){
+  ruta = "/posts/"+slug
+  
+  fetch(ruta, {method: 'POST'})
+      .then((res) => res.json())
+      .then((res) => {
+                      console.log(res)
+                      document.querySelector(`#${slug} .card-text`).textContent = res.body
+                      })
+}
