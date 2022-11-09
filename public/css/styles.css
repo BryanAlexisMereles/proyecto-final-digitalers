@@ -61,6 +61,20 @@ h6 {
     cursor: pointer;
 }
 
+.circulo-contenedor {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: solid rgba(240, 248, 255, 0.582) 5px;
+}
+
+.circulo-contenedor img {
+    width: 250px;
+    position: relative;
+    left: -40px;
+}
+
 .logo-text {
     font-size: 30px;
 }

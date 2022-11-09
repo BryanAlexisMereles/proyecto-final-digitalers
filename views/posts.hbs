@@ -2,6 +2,10 @@
     <h1 class="m-0">ULTIMAS ENTRADAS</h1>
     <button type="button" class="btn btn-success">Crea uno</button>
 </div>
+
+{{#if posts}}
+    
+
 {{#each posts}}
         <div id="{{this.slug}}" class="card border-secondary m-3" style="max-width: 100%;">
             <div class="card-header">Posteo</div>
@@ -14,3 +18,9 @@
             </div>
         </div>
 {{/each}}
+{{else}}
+<hr>
+<h2>No existen posts aún</h2>
+<div class="d-flex justify-content-center"><img class="card" src="/img/nopost.png" width="250" height="250"></div>
+
+{{/if}}

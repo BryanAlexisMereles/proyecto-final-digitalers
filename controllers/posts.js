@@ -41,7 +41,7 @@ const showPosts = async (req = express.request,res = express.response) => {
     { 
       res.render('show', {
         title: 'No existe este post',
-        descripcion: '<div class="d-flex justify-content-center"><img src="https://i.imgflip.com/703cqo.jpg" width=250 height=250></div>'
+        descripcion: '<div class="d-flex justify-content-center"><img class="card" src="/img/nopost.png" width="250" height="250"></div>'
       }) 
     }
     else{
