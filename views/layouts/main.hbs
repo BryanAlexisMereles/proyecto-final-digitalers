@@ -7,6 +7,8 @@
 
     {{!-- Bootswatch / Bootstrap --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.2/quartz/bootstrap.min.css" integrity="sha512-GlPFmIhfvCl79w3jNnFX4LG5pP/bRPOyHDVjUXs3aWOrMC0HNHRdH5RrplrQZQDshU+9ibUHsE5Mkznt3ClPpQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {{!-- Iconos --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
     {{!-- Google fonts --}}
    {{!--  <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,21 +29,27 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
 
   <div class="container-fluid">
-
-    <a class="navbar-brand d-flex align-items-center justify-content-center" href="/">
+    <a class="navbar-brand d-flex align-items-center justify-content-center col-2" href="/">
       <img src="/img/logo.svg" alt="Michi Blog" width="80" height="80">
       <h1 class="logo-text m-0">Michi Blog</h1>
     </a>
       
-    <div class="navbar-nav me-auto"></div>
-
-    <form class="d-flex">
-      <input class="form-control me-sm-2" type="text" placeholder="¿Qué buscas?">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
-    </form>
-
+    <div class="form-group mx-3 col-2">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link pt-0 pl-0 pr-0" href="#">Registrarse</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pt-0" href="#">Iniciar sesión</a>
+        </li>
+      </ul>
+      <div class="input-group">
+        <input type="text" class="form-control form-control-sm" placeholder="¿Qué buscas?">
+        <button class="btn btn-sm btn-secondary" type="button"> <i class="bi bi-search"></i> </button>
+      </div>
+    </div>
   </div>
-  <div style="background-color: black; height:10px"></div>
+  
 </nav>
 
 <hr class="mt-0">
